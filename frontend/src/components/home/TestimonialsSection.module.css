@@ -1,0 +1,225 @@
+.section {
+  background-color: #F8FAFC;
+  padding: var(--space-20) 0;
+}
+
+/* 3-Column Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Premium Card Design */
+.testimonialCard {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6) var(--space-6) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: relative;
+  transition: var(--transition-base);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.testimonialCard:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Quote Icon Overlay */
+.quoteIcon {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  color: rgba(201, 162, 39, 0.1);
+  pointer-events: none;
+}
+
+.stars {
+  display: flex;
+  gap: var(--space-1);
+  color: var(--color-gold);
+}
+
+.quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: #555B6E;
+  line-height: var(--leading-relaxed);
+  flex: 1;
+}
+
+/* User Info Profile Area */
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid #F1F5F9;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 2px solid var(--color-gold);
+  flex-shrink: 0;
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.userName {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: #1A1A2E;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userMeta {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userCompany {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  font-weight: var(--font-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+/* Read More Button Wrapper */
+.viewAllWrapper {
+  text-align: center;
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-16);
+}
+
+/* Full Width Glassmorphic CTA Banner */
+.ctaBanner {
+  background: linear-gradient(135deg, #1A1A2E 0%, #2A2A4E 100%);
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-10);
+  box-shadow: var(--shadow-gold);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.ctaBanner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .ctaBanner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: var(--space-10) var(--space-12);
+  }
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .ctaContent {
+    text-align: left;
+    max-width: 60%;
+  }
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: #FFFFFF;
+  margin-bottom: var(--space-2);
+}
+
+.ctaDescription {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: var(--leading-relaxed);
+}
+
+.ctaActions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .ctaActions {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+}
+
+.downloadBtn {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .downloadBtn {
+    width: auto;
+  }
+}

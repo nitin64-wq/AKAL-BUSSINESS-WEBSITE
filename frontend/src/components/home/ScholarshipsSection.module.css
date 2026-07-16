@@ -1,0 +1,97 @@
+.section {
+  background-color: #F5F7FA;
+  padding: var(--space-20) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.scholarshipCard {
+  background: #FFFFFF;
+  border: 1px solid #E8ECF4;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: var(--transition-base);
+}
+
+.scholarshipCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background-color: #F5F7FA;
+  border: 1px solid #E8ECF4;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-6);
+  color: var(--color-gold);
+  transition: var(--transition-base);
+}
+
+.scholarshipCard:hover .iconWrapper {
+  background-color: var(--color-gold);
+  color: #FFFFFF;
+  border-color: var(--color-gold);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: #1A1A2E;
+  margin-bottom: var(--space-3);
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: #555B6E;
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+  flex-grow: 1;
+}
+
+.amountBadge {
+  background-color: #F5F7FA;
+  border: 1px solid #E8ECF4;
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-gold);
+  display: inline-block;
+  align-self: center;
+  transition: var(--transition-fast);
+}
+
+.scholarshipCard:hover .amountBadge {
+  border-color: var(--color-gold);
+  background-color: rgba(201, 162, 39, 0.08);
+}

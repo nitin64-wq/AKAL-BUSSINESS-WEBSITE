@@ -1,0 +1,53 @@
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E8ECF4;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Premium border glow and upward translations on hover */
+.interactive {
+  cursor: pointer;
+}
+
+.interactive:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Glassmorphism Variant */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: #E8ECF4;
+}
+
+.glass:hover:not(.static) {
+  border-color: rgba(201, 162, 39, 0.4);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.cardHeader {
+  margin-bottom: var(--space-4);
+}
+
+.cardBody {
+  color: #555B6E;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+.cardFooter {
+  margin-top: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #E8ECF4;
+  padding-top: var(--space-4);
+}

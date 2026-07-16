@@ -1,0 +1,116 @@
+.section {
+  background-color: #FFFFFF;
+  padding: var(--space-20) 0;
+  border-top: 1px solid #E8ECF4;
+  border-bottom: 1px solid #E8ECF4;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+.uniCard {
+  background: #FFFFFF;
+  border: 1px solid #E8ECF4;
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-base);
+  height: 100%;
+}
+
+.uniCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.logoArea {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background-color: #F5F7FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  color: var(--color-gold);
+}
+
+.uniCard:hover .logoArea {
+  background-color: var(--color-gold);
+  color: #FFFFFF;
+}
+
+.uniName {
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  color: #1A1A2E;
+  margin-bottom: var(--space-2);
+  line-height: var(--leading-snug);
+}
+
+.uniDesc {
+  font-size: 11px;
+  color: #555B6E;
+  line-height: 1.5;
+}
+
+/* Right column benefits */
+.benefitsCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.benefitItem {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.benefitIcon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.benefitText {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: #555B6E;
+}

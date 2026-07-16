@@ -1,0 +1,454 @@
+/* ============================================================
+   PLACEMENTS SECTION — Premium Redesign
+   Glassmorphism stats + Logo Marquee + Vibrant Career Outcomes
+   ============================================================ */
+
+.section {
+  background: linear-gradient(180deg, #F5F7FA 0%, #FFFFFF 40%, #F5F7FA 100%);
+  padding: var(--space-24) 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Subtle decorative elements */
+.section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ─── STATS GRID ─── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+.statCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10) var(--space-8);
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  transition: var(--transition-base);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.statCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #C9A227, #D4B33A, #E5C158, #D4B33A, #C9A227);
+  background-size: 200% 100%;
+  animation: gradientSlide 3s ease infinite;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.statCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(201, 162, 39, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.statCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 162, 39, 0.35);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(201, 162, 39, 0.1);
+}
+
+.statIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--space-5);
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.12), rgba(201, 162, 39, 0.04));
+  border-radius: var(--radius-lg);
+  font-size: 1.6rem;
+  color: var(--color-gold);
+}
+
+.statNum {
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: var(--font-extrabold);
+  background: linear-gradient(135deg, #C9A227, #B08E1F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-2);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: #555B6E;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: var(--font-semibold);
+}
+
+/* ─── RECRUITERS MARQUEE ─── */
+.recruitersArea {
+  margin-bottom: var(--space-20);
+  text-align: center;
+  position: relative;
+}
+
+.recruiterTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: #1A1A2E;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-10);
+  position: relative;
+  display: inline-block;
+}
+
+.recruiterTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-full);
+}
+
+/* Marquee container */
+.marqueeWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: var(--space-8);
+  width: max-content;
+  animation: marqueeScroll 20s linear infinite;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+.logoItem {
+  flex-shrink: 0;
+  width: 140px;
+  height: 80px;
+  background: #FFFFFF;
+  border: 1px solid #E8ECF4;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.logoItem:hover {
+  border-color: var(--color-gold);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(201, 162, 39, 0.15);
+  transform: scale(1.05);
+}
+
+.logoImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: saturate(1);
+  transition: var(--transition-base);
+}
+
+.logoItem:hover .logoImg {
+  filter: saturate(1.2);
+  transform: scale(1.08);
+}
+
+/* Colorful SVG logo fallback (when no image) */
+.logoFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoFallbackIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: var(--font-extrabold);
+  font-size: var(--text-xl);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+/* Second marquee row — reverse direction */
+.marqueeTrackReverse {
+  display: flex;
+  gap: var(--space-8);
+  width: max-content;
+  animation: marqueeScrollReverse 22s linear infinite;
+  margin-top: var(--space-6);
+}
+
+.marqueeTrackReverse:hover {
+  animation-play-state: paused;
+}
+
+/* ─── CAREER OUTCOMES ─── */
+.outcomesArea {
+  position: relative;
+  text-align: center;
+  padding-top: var(--space-16);
+}
+
+.outcomesArea::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E8ECF4, rgba(201, 162, 39, 0.3), #E8ECF4, transparent);
+}
+
+.outcomesTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: #1A1A2E;
+  margin-bottom: var(--space-3);
+}
+
+.outcomesSubtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: #555B6E;
+  margin-bottom: var(--space-10);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: var(--leading-relaxed);
+}
+
+.outcomesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .outcomesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .outcomesGrid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+.outcomeCard {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #E8ECF4;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-4);
+  font-family: var(--font-display);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  color: #1A1A2E;
+  transition: var(--transition-base);
+  cursor: default;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.outcomeCard::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--outcome-gradient, var(--gradient-gold));
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.outcomeCard:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(201, 162, 39, 0.08);
+  border-color: transparent;
+}
+
+.outcomeCard:hover::before {
+  opacity: 1;
+}
+
+.outcomeIconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: var(--outcome-bg, rgba(201, 162, 39, 0.08));
+  transition: var(--transition-base);
+}
+
+.outcomeCard:hover .outcomeIconWrapper {
+  transform: scale(1.1);
+}
+
+.outcomeLabel {
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+}
+
+/* Individual outcome color theming */
+.outcomeCard:nth-child(1) {
+  --outcome-gradient: linear-gradient(90deg, #6366F1, #818CF8);
+  --outcome-bg: rgba(99, 102, 241, 0.1);
+}
+.outcomeCard:nth-child(2) {
+  --outcome-gradient: linear-gradient(90deg, #10B981, #34D399);
+  --outcome-bg: rgba(16, 185, 129, 0.1);
+}
+.outcomeCard:nth-child(3) {
+  --outcome-gradient: linear-gradient(90deg, #F59E0B, #FBBF24);
+  --outcome-bg: rgba(245, 158, 11, 0.1);
+}
+.outcomeCard:nth-child(4) {
+  --outcome-gradient: linear-gradient(90deg, #EF4444, #F87171);
+  --outcome-bg: rgba(239, 68, 68, 0.1);
+}
+.outcomeCard:nth-child(5) {
+  --outcome-gradient: linear-gradient(90deg, #8B5CF6, #A78BFA);
+  --outcome-bg: rgba(139, 92, 246, 0.1);
+}
+.outcomeCard:nth-child(6) {
+  --outcome-gradient: linear-gradient(90deg, #06B6D4, #22D3EE);
+  --outcome-bg: rgba(6, 182, 212, 0.1);
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes gradientSlide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeScrollReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ─── RESPONSIVE FINE-TUNING ─── */
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .statNum {
+    font-size: 2.25rem;
+  }
+
+  .statCard {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .logoItem {
+    width: 110px;
+    height: 64px;
+  }
+
+  .outcomesTitle {
+    font-size: var(--text-xl);
+  }
+}

@@ -1,0 +1,201 @@
+.wrapper {
+  background-color: var(--color-navy-mid);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: var(--space-1);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .controls {
+    width: auto;
+  }
+}
+
+.searchWrapper {
+  position: relative;
+  flex: 1;
+}
+
+@media (min-width: 640px) {
+  .searchWrapper {
+    width: 240px;
+    flex-grow: 0;
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  background-color: var(--color-navy-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-9);
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+  transition: var(--transition-fast);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  margin-bottom: var(--space-6);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.table th {
+  background-color: var(--color-navy-light);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  user-select: none;
+}
+
+.sortableHeader {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sortableHeader:hover {
+  color: var(--color-gold-light);
+}
+
+.table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-off-white);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--color-muted);
+  padding: var(--space-12) 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.paginationInfo {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.btnAction {
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  color: var(--color-muted);
+  border: 1px solid transparent;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnEdit:hover {
+  color: var(--color-gold-light);
+  background-color: rgba(201, 168, 76, 0.1);
+  border-color: var(--color-gold);
+}
+
+.btnDelete:hover {
+  color: #ff5c5c;
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--color-error);
+}
+
+.btnIcon {
+  flex-shrink: 0;
+}

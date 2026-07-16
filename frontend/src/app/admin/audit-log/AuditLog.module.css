@@ -1,0 +1,87 @@
+.changesContainer {
+  background-color: var(--color-navy-light);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  max-height: 50vh;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-off-white);
+  white-space: pre-wrap;
+}
+
+.diffTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-4);
+}
+
+.diffTable th {
+  border-bottom: 2px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+}
+
+.diffTable td {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  vertical-align: top;
+}
+
+.diffRemoved {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ff5c5c;
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+}
+
+.diffAdded {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--color-success);
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+}
+
+.filterHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  background-color: var(--color-navy-mid);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+  align-items: center;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.filterLabel {
+  font-size: 11px;
+  color: var(--color-muted);
+  font-weight: var(--font-semibold);
+}
+
+.filterInput {
+  background-color: var(--color-navy-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  outline: none;
+}
+
+.filterInput:focus {
+  border-color: var(--color-gold);
+}

@@ -1,0 +1,82 @@
+.bar {
+  background: linear-gradient(90deg, #1A1A2E, #C9A227, #1A1A2E);
+  background-size: 200% auto;
+  color: #FFFFFF;
+  padding: 10px 0;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  box-shadow: var(--shadow-sm);
+  animation: gradientShift 5s ease infinite;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+.link {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.marquee {
+  display: flex;
+  gap: 40px;
+  animation: marqueeWalk 20s linear infinite;
+  width: max-content;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 40px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.marqueeItem:hover {
+  color: #E8D48B;
+}
+
+.pulsingDot {
+  width: 8px;
+  height: 8px;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 8px #FFFFFF;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+@keyframes marqueeWalk {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

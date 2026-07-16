@@ -1,0 +1,42 @@
+.layout,
+.loginLayout {
+  --color-navy: #0B0E17;
+  --color-navy-mid: #151D30;
+  --color-navy-light: #202B42;
+  --color-border: #23304B;
+  --color-off-white: #E2E8F0;
+  --color-muted: #8E9DBE;
+  --color-white: #FFFFFF;
+  --color-gold: #C9A227;
+  --color-gold-light: #E5C158;
+  --color-gold-dark: #A48118;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-navy);
+  color: var(--color-off-white);
+}
+
+.mainContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevents overflow issues with flex children */
+}
+
+.content {
+  flex: 1;
+  padding: 0 var(--space-6);
+  background-color: var(--color-navy);
+  overflow-y: auto;
+}
+
+.loginLayout {
+  min-height: 100vh;
+  background-color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

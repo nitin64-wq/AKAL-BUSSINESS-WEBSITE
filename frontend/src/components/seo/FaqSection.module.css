@@ -1,0 +1,116 @@
+/* ============================================================
+   ABS — FAQ Accordion Component Styles
+   Premium interactive styling matching the navy/gold system.
+   ============================================================ */
+
+.faqContainer {
+  margin: var(--space-8) 0;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-6);
+  text-align: center;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-gold);
+  margin: var(--space-2) auto 0;
+  border-radius: var(--radius-sm);
+}
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.item {
+  background: var(--color-navy-mid);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.item:hover {
+  border-color: var(--color-gold);
+}
+
+.itemActive {
+  composes: item;
+  border-color: var(--color-gold);
+  box-shadow: 0 4px 20px rgba(201, 162, 39, 0.05);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: var(--space-4);
+  outline: none;
+}
+
+.question {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-white);
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.header:hover .question {
+  color: var(--color-gold-light);
+}
+
+.iconWrapper {
+  color: var(--color-muted);
+  transition: transform 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.itemActive .iconWrapper {
+  transform: rotate(180deg);
+  color: var(--color-gold);
+}
+
+.contentWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.content {
+  padding: 0 20px 20px 20px;
+  font-size: var(--text-sm);
+  color: var(--color-off-white);
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: 16px;
+}
+
+.content p {
+  margin-bottom: var(--space-3);
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}

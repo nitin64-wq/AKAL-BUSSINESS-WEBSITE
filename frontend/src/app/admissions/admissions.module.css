@@ -1,0 +1,143 @@
+.hero {
+  background: var(--gradient-hero);
+  padding: var(--space-24) 0 var(--space-16);
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heroTitle {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-extrabold);
+  margin-bottom: var(--space-4);
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--space-20) 0;
+  background-color: #FFFFFF;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .splitGrid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.contentBlock h2 {
+  font-size: var(--text-2xl);
+  color: #1A1A2E;
+  margin-bottom: var(--space-4);
+}
+
+.contentBlock p {
+  font-size: var(--text-sm);
+  color: #555B6E;
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+/* Steps list */
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+}
+
+.stepItem {
+  display: flex;
+  gap: var(--space-4);
+  background-color: var(--color-navy-mid);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.stepNum {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-gold);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-bold);
+  flex-shrink: 0;
+}
+
+.stepInfo h4 {
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: #1A1A2E;
+  margin-bottom: var(--space-1);
+}
+
+.stepInfo p {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin: 0;
+  line-height: var(--leading-normal);
+}
+
+/* Form block */
+.formWrapper {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+/* Fees Table styling */
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin: var(--space-6) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.feesTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+  color: #555B6E;
+}
+
+.feesTable th {
+  background-color: var(--color-navy-mid);
+  color: #1A1A2E;
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.feesTable td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.feesTable tr:last-child td {
+  border-bottom: none;
+}

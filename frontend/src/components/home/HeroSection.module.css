@@ -1,0 +1,223 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0;
+  background: #1A1A2E;
+}
+
+.swiperContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperSlide {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .swiperSlide {
+    min-height: 650px;
+  }
+}
+
+.slideBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slideOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.82) 45%, rgba(26, 26, 46, 0.3) 100%);
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .slideOverlay {
+    background: rgba(26, 26, 46, 0.9);
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+  width: 100%;
+  padding: var(--space-12) var(--space-6) var(--space-20);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: var(--space-12);
+    padding: var(--space-20) var(--space-8);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.badgeWrapper {
+  display: inline-flex;
+}
+
+.title {
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+  font-weight: var(--font-extrabold);
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--text-5xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: var(--text-6xl);
+  }
+}
+
+.titleHighlight {
+  color: var(--color-gold);
+}
+
+.description {
+  font-size: var(--text-base);
+  color: #E8ECF4;
+  line-height: var(--leading-relaxed);
+  max-width: 650px;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: var(--text-lg);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+/* Right Column Visuals */
+.visualWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+@media (min-width: 1024px) {
+  .visualWrapper {
+    height: 350px;
+    justify-content: flex-end;
+  }
+}
+
+/* Floating Stat Card - styled glassmorphic for premium contrast */
+.floatingCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), var(--shadow-glow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+  width: 220px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.cardNum {
+  font-family: var(--font-mono);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: #1A1A2E;
+}
+
+.cardLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: #555B6E;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Swiper navigation and pagination overrides matching Akal University brand style */
+.hero :global(.swiper-button-next),
+.hero :global(.swiper-button-prev) {
+  color: #FFFFFF;
+  background: rgba(26, 26, 46, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  transition: all 0.25s ease;
+}
+
+.hero :global(.swiper-button-next):hover,
+.hero :global(.swiper-button-prev):hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.hero :global(.swiper-button-next)::after,
+.hero :global(.swiper-button-prev)::after {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* Hide navigation arrows on small mobile devices to prevent layout clutter */
+@media (max-width: 640px) {
+  .hero :global(.swiper-button-next),
+  .hero :global(.swiper-button-prev) {
+    display: none !important;
+  }
+}
+
+.hero :global(.swiper-pagination-bullet) {
+  background: #FFFFFF;
+  opacity: 0.4;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+}
+
+.hero :global(.swiper-pagination-bullet-active) {
+  background: var(--color-gold);
+  opacity: 1;
+  width: 32px;
+  border-radius: 5px;
+}

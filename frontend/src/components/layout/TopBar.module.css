@@ -1,0 +1,58 @@
+.topBar {
+  background-color: #F5F7FA;
+  border-bottom: 1px solid #E8ECF4;
+  height: 40px;
+  display: none;
+  align-items: center;
+  font-size: var(--text-xs);
+  color: #555B6E;
+}
+
+@media (min-width: 1024px) {
+  .topBar {
+    display: flex;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.socialLink {
+  color: #555B6E;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+}
+
+.socialLink:hover {
+  color: var(--color-gold);
+  transform: translateY(-1px);
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #555B6E;
+  transition: var(--transition-fast);
+}
+
+.contactItem:hover {
+  color: var(--color-gold);
+}

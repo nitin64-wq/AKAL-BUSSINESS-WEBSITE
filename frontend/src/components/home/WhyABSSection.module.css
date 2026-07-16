@@ -1,0 +1,121 @@
+.section {
+  background-color: #FFFFFF;
+  padding: var(--space-20) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--space-16);
+  }
+}
+
+.grid.noImage {
+  grid-template-columns: 1fr !important;
+}
+
+.imageCol {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.imageFrame {
+  width: 100%;
+  max-width: 440px;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  border: 1px solid #E8ECF4;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #F5F7FA 0%, #FFFFFF 100%);
+}
+
+.imageFrame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, transparent 100%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.imagePlaceholderText {
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  color: var(--color-gold);
+  font-size: var(--text-2xl);
+  text-transform: uppercase;
+}
+
+/* Feature Grid */
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.featureCard {
+  background: #FFFFFF;
+  border: 1px solid #E8ECF4;
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: var(--transition-base);
+}
+
+.featureCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201, 162, 39, 0.3);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.iconWrapper {
+  background: rgba(201, 162, 39, 0.08);
+  color: var(--color-gold);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.featureCard:hover .iconWrapper {
+  background-color: var(--color-gold);
+  color: #FFFFFF;
+}
+
+.featureTitle {
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  font-size: var(--text-base);
+  color: #1A1A2E;
+}
+
+.featureDesc {
+  font-size: var(--text-xs);
+  color: #555B6E;
+  line-height: var(--leading-relaxed);
+}

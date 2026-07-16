@@ -1,0 +1,212 @@
+.sidebar {
+  background-color: var(--color-navy-mid);
+  border-right: 1px solid var(--color-border);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  width: 256px;
+  transition: var(--transition-base);
+  z-index: var(--z-sticky);
+}
+
+.collapsed {
+  width: 72px;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logoLink {
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.logoGold {
+  color: var(--color-gold);
+}
+
+.logoText {
+  color: var(--color-off-white);
+}
+
+.toggleBtn {
+  background-color: var(--color-navy-light);
+  border: 1px solid var(--color-border);
+  color: var(--color-gold-light);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.toggleBtn:hover {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.userInfo {
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  border: 2px solid var(--color-gold-light);
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.userName {
+  font-family: var(--font-display);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  color: var(--color-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.roleBadge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: var(--font-bold);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  display: inline-block;
+  text-align: center;
+  width: fit-content;
+}
+
+.roleAdmin {
+  background-color: rgba(201, 168, 76, 0.1);
+  color: var(--color-gold-light);
+  border: 1px solid var(--color-gold);
+}
+
+.roleEditor {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--color-info);
+  border: 1px solid var(--color-info);
+}
+
+.roleViewer {
+  background-color: rgba(138, 155, 191, 0.1);
+  color: var(--color-muted);
+  border: 1px solid var(--color-muted);
+}
+
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-2);
+}
+
+/* Custom Scrollbar for Sidebar */
+.nav::-webkit-scrollbar {
+  width: 4px;
+}
+.nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+.nav::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-muted);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-family: var(--font-display);
+  font-weight: var(--font-medium);
+  transition: var(--transition-fast);
+}
+
+.navLink:hover {
+  background-color: var(--color-navy-light);
+  color: var(--color-white);
+}
+
+.navLinkActive {
+  background-color: rgba(201, 168, 76, 0.1);
+  color: var(--color-gold-light);
+  border-left: 3px solid var(--color-gold);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+.footer {
+  padding: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.logoutBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-error);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-family: var(--font-display);
+  font-weight: var(--font-medium);
+  transition: var(--transition-fast);
+  text-align: left;
+}
+
+.logoutBtn:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ff5c5c;
+}
