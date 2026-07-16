@@ -1,0 +1,185 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\News;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
+
+class NewsSeeder extends Seeder
+{
+    public function run()
+    {
+        $newsItems = [
+            [
+                'title' => 'Building Financial Awareness – Credit Awareness Workshop at Akal University Empowers Future Professionals',
+                'excerpt' => 'Akal University organized a Credit Awareness Workshop focusing on building financial literacy, credit scores, and financial planning for future careers.',
+                'body' => 'In this highly competitive world, financial literacy is key to career success. Akal University organized an intensive Credit Awareness Workshop, helping students understand the fundamentals of credit scores, loan management, and sound financial decision-making as they transition into corporate environments.',
+                'cover_image' => '/storage/news/financial-awareness.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2026-04-10 10:00:00'),
+                'is_featured' => true,
+                'is_published' => true,
+                'views' => 145,
+            ],
+            [
+                'title' => 'From Fields to Glory – Akal University NCC Cadets Shine with \'A\' Grades in Certificate \'B\' Examination',
+                'excerpt' => 'Akal University NCC cadets demonstrated exceptional dedication, achieving top grades in the recent Certificate B examinations.',
+                'body' => 'Demonstrating discipline and excellence, Akal University NCC cadets successfully cleared the Certificate B examination with stellar \'A\' grades. The training at Akal University equips students not only with academic insights but also leadership, service principles, and national values.',
+                'cover_image' => '/storage/news/ncc-cadets.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2026-04-05 09:30:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 92,
+            ],
+            [
+                'title' => 'Global Innovation Meets Technology – CI2A–2026 Conference Drives Connected Intelligence at Akal University',
+                'excerpt' => 'Distinguished international researchers converged at Akal University for the CI2A-2026 conference to discuss the future of Connected Intelligence.',
+                'body' => 'The International Conference on Connected Intelligence, AI & Analytics (CI2A-2026) brought together distinguished global experts, industry leaders, and researchers at Akal University to explore breakthroughs in neural network computing, analytics frameworks, and advanced automation technologies.',
+                'cover_image' => '/storage/news/ci2a-2026.jpg',
+                'category' => 'International Conference',
+                'published_at' => Carbon::parse('2026-02-18 11:00:00'),
+                'is_featured' => true,
+                'is_published' => true,
+                'views' => 310,
+            ],
+            [
+                'title' => 'Exploring Career Paths in Life Sciences – Inspiring Alumni Talk at Akal University',
+                'excerpt' => 'Akal University alumni shared career journeys and advice on research and commercial avenues in life sciences with current students.',
+                'body' => 'Akal University hosted an alumni talk focusing on opportunities in Life Sciences. Senior graduates working in key biotechnology and pharmaceuticals roles shared insights into academic research pathways, industrial skills, and internship applications.',
+                'cover_image' => '/storage/news/alumni-talk.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2026-04-12 14:00:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 64,
+            ],
+            [
+                'title' => 'Industrial Visit to ICAR–CIFRI Bathinda Enriches Learning Experience',
+                'excerpt' => 'Students gained hands-on learning during an educational visit to the ICAR-CIFRI research station in Bathinda.',
+                'body' => 'Enriching their empirical understanding of biological systems and resource management, students of Akal University completed an educational visit to ICAR-CIFRI in Bathinda, engaging directly with research scientists and advanced labs.',
+                'cover_image' => '/storage/news/industrial-visit.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2026-04-02 10:00:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 78,
+            ],
+            [
+                'title' => 'From Classroom to Global Stage – Jashanpreet Singh Sarao’s Inspiring Journey to International Diplomacy',
+                'excerpt' => 'Graduate Jashanpreet Singh Sarao makes a mark in international diplomacy representing the values of Akal University.',
+                'body' => 'Highlighting the global potential of Akal Business School and Akal University students, graduate Jashanpreet Singh Sarao successfully stepped into the sphere of international diplomacy, reflecting the high-caliber value-based instruction of the institution.',
+                'cover_image' => '/storage/news/jashanpreet-diplomacy.jpg',
+                'category' => 'Research',
+                'published_at' => Carbon::parse('2026-04-15 09:00:00'),
+                'is_featured' => true,
+                'is_published' => true,
+                'views' => 240,
+            ],
+            [
+                'title' => 'From Silent Dreams to IITs – How Three Rural Girls Cracked IIT JAM 2026',
+                'excerpt' => 'Three hardworking girls from rural Punjab cracked the prestigious IIT JAM 2026 exam under the guidance of Akal University.',
+                'body' => 'In a monumental achievement for girls\' education, three rural students guided by Akal University\'s Center for Competitive Examination cracked the prestigious IIT JAM 2026 exam, paving their way to Master programs at India\'s premier Indian Institutes of Technology.',
+                'cover_image' => '/storage/news/iit-jam.jpg',
+                'category' => 'Research',
+                'published_at' => Carbon::parse('2026-04-01 08:30:00'),
+                'is_featured' => true,
+                'is_published' => true,
+                'views' => 450,
+            ],
+            [
+                'title' => 'UGC NET Success at Akal University – Scholars Set New Benchmark in Academic Excellence',
+                'excerpt' => 'Scholars of Akal University qualify the UGC-NET exam, highlighting the strength of academic mentoring.',
+                'body' => 'Scholars at Akal University have qualified the national UGC-NET examination, establishing new benchmarks of research capability and academic excellence, thanks to rigorous faculty mentorship and extensive research library resources.',
+                'cover_image' => '/storage/news/ugc-net.jpg',
+                'category' => 'Research',
+                'published_at' => Carbon::parse('2026-02-10 10:00:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 180,
+            ],
+            [
+                'title' => 'From Rural Roots to Global Careers – How Akal University Shaped Two Data Analysts for Dubai',
+                'excerpt' => 'Two data analytics graduates secure international placements in Dubai, highlighting global recruitment readiness.',
+                'body' => 'Akal Business School\'s focus on data-driven management has paid off as two graduates secured placements as Data Analysts in Dubai, showcasing that students from rural roots can achieve high-level global corporate success.',
+                'cover_image' => '/storage/news/dubai-analysts.jpg',
+                'category' => 'Placement Drive',
+                'published_at' => Carbon::parse('2026-02-05 12:00:00'),
+                'is_featured' => true,
+                'is_published' => true,
+                'views' => 380,
+            ],
+            [
+                'title' => 'From Small Town to Big Science – Ms. Pinky’s Rise in Nuclear Physics',
+                'excerpt' => 'Akal University research scholar Ms. Pinky is recognized for her academic contributions to Nuclear Physics.',
+                'body' => 'Highlighting research caliber, Akal University scholar Ms. Pinky achieved major milestones in Nuclear Physics research, validating the university\'s commitment to high-impact science and advanced research laboratories.',
+                'cover_image' => '/storage/news/miss-pinky.jpg',
+                'category' => 'Research',
+                'published_at' => Carbon::parse('2026-02-01 10:00:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 120,
+            ],
+            [
+                'title' => 'Akal University Boosts Research Infrastructure with Cutting Edge Nanotechnology and Nuclear Physics Lab',
+                'excerpt' => 'New advanced laboratories inaugurated to empower students in nanotechnology and nuclear sciences.',
+                'body' => 'Akal University has officially inaugurated its advanced Nanotechnology and Nuclear Physics Research laboratories. The facility contains state-of-the-art analytical equipment, ensuring that research scholars and students have top-tier resources.',
+                'cover_image' => '/storage/news/nanotech-lab.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2026-02-15 11:30:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 195,
+            ],
+            [
+                'title' => 'AI in Education Gets Real – Akal University Trains 48 Principals to Lead the Future',
+                'excerpt' => 'Akal University conducted a professional workshop on integrating AI tools in school administration for 48 regional school principals.',
+                'body' => 'Driving modern educational leadership, Akal University conducted an intensive professional development workshop training 48 school principals on the practical, ethical, and administrative integration of Artificial Intelligence within regional schools.',
+                'cover_image' => '/storage/news/ai-education-principals.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2026-04-14 09:00:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 112,
+            ],
+            [
+                'title' => 'When Students Lead, Society Heals – Akal University’s AIDS Awareness & Free Health Checkup Camp',
+                'excerpt' => 'A free health camp and awareness drive organized by students to serve local rural communities.',
+                'body' => 'In line with the vision of value-based education and social service, Akal University students organized a comprehensive AIDS Awareness and Free Health Checkup Camp, offering diagnostic checks and consultation to hundreds of local villagers.',
+                'cover_image' => '/storage/news/aids-awareness.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2025-12-10 10:00:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 88,
+            ],
+            [
+                'title' => 'Honoring the Legacy of the Quiet Economist – Inauguration of Dr Manmohan Singh Chair in Development Economics',
+                'excerpt' => 'Akal University established the Dr Manmohan Singh Chair in Development Economics to encourage regional policy research.',
+                'body' => 'To encourage high-impact policy studies and regional development research, Akal University officially inaugurated the Dr Manmohan Singh Chair in Development Economics, dedicated to studying rural markets and structural economics.',
+                'cover_image' => '/storage/news/manmohan-singh-chair.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2025-01-10 10:00:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 155,
+            ],
+            [
+                'title' => 'Exploring the Metaverse: Alumni Workshop at Akal University',
+                'excerpt' => 'An engaging alumni workshop introducing student developers to metaverse technologies and spatial computing.',
+                'body' => 'Akal University students explored spatial computing and immersive technologies during a Metaverse and Web3 workshop led by industry-seasoned alumni, highlighting the university\'s focus on cutting-edge industry trends.',
+                'cover_image' => '/storage/news/metaverse-webinar.jpg',
+                'category' => 'Campus News',
+                'published_at' => Carbon::parse('2024-10-15 10:00:00'),
+                'is_featured' => false,
+                'is_published' => true,
+                'views' => 134,
+            ]
+        ];
+
+        foreach ($newsItems as $item) {
+            News::create($item);
+        }
+    }
+}
